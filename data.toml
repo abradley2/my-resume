@@ -1,0 +1,108 @@
+Name = "Anthony Bradley"
+Email = "antbradley91@gmail.com"
+LinkedIn = "https://www.linkedin.com/in/anthony-bradley-78205264/"
+Phone = "(203) 564-3509"
+Github = "https://github.com/abradley2"
+Address = "6360 Montrose Rd. North Bethesda, MD"
+
+[[Technologies]]
+Ranking = "Mainstay"
+Items = "Go, TypeScript, Rust, Haskell, Clojure, Zig"
+
+[[Technologies]]
+Ranking = "Extra Proficient"
+Items = "Postgres, MongoDB, Pub/Sub, RabbitMQ, Redis"
+
+[[Technologies]]
+Ranking = "Proficient"
+Items = "AWS, Google Cloud Platform, Digital Ocean, Python"
+
+[[Technologies]]
+Ranking = "Learning"
+Items = "Machine Learning, PyTorch, Arduino, Godot, C"
+
+
+[[OpenSourceContributions]]
+Link = "https://github.com/charmbracelet/huh/pull/280"
+Language = "Go"
+Description = "Makes TUI form callbacks configurable by the user"
+
+[[OpenSourceContributions]]
+Link = "https://github.com/lafriks/go-tiled/pull/7"
+Language = "Go"
+Description = "Adds support for margin and spacing when reading Tilesets"
+
+[[OpenSourceContributions]]
+Link = "https://github.com/mweiss/elm-rte-toolkit/pull/23"
+Language = "Elm"
+Description = "Returned error accumulates sub-errors in situations where parsing fails"
+
+[[OpenSourceContributions]]
+Link = "https://github.com/max-mapper/yo-yo/pull/68"
+Language = "JavaScript"
+Description = "Fixes an issue where an input cannot be cleared under certain conditions"
+
+[[EmploymentHistory]]
+Title = "PURE Property Management"
+Dates = "June 2023 - Present"
+JobTitle = "Senior Software Engineer / Team Lead"
+Description = """
+Property management software for property owners and residents.
+Backend entirely in Node.js, with Python for select data-engineering scripts.
+Frontend written in Vue.js.
+Makes heavy use of Google Cloud Platform's Pub/Sub, Cloud Functions, and Workflow
+suite.
+"""
+
+[[EmploymentHistory]]
+Title = "Caribou"
+Dates = "Feb 2022 - Jan 2023"
+JobTitle = "Senior Software Engineer"
+Description = """
+Insurance platform for the company. Backend written in Haskell,
+with event-sourcing architecture that leveraged
+Postgres, Message DB, and Confluent/Kafka. Frontend written in Elm.
+"""
+
+[[EmploymentHistory]]
+Title = "WireWheel"
+Dates = "Jun 2021 - Mar 2022"
+JobTitle = """Senior Software Engineer"""
+Description = """
+Security compliance software. Backend logic was very focused in Postgres functions.
+Experimental frontend done in PureScript, other frontend in Vue.
+"""
+
+
+[[EmploymentHistory]]
+Title = "Interos"
+Dates = "Jul 2020 - Jun 2021"
+JobTitle = """Senior Software Engineer"""
+Description = """
+Supply chain risk management platform.
+React.js frontend and a large amount of D3 for creating data visualizations.
+"""
+
+
+[[EmploymentHistory]]
+Title = "Upside Business Travel"
+Dates = "Dec 2016 - Feb 2020"
+JobTitle = """Software Engineer"""
+Description = """
+Business Travel platform. Frontend for selling inventory, and backend
+for inventory procurement and ticketing.
+React.js and Angular frontend development. Microservice architecture
+with Go, Node, and some Python on the backend. AWS as a cloud provider making heavy use of
+SQS.
+"""
+
+
+[[EmploymentHistory]]
+Title = "CORAS"
+Dates = "Jan 2015 - Dec 2016"
+JobTitle = """Software Engineer"""
+Description = """
+Worked to help create a "low-code/no-code" app creation platform.
+Knockout.js and Kendo UI frontend development, with a C# backend and MongoDB as the
+data layer.
+"""

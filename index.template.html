@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="layout">
+            <div class="updated">Updated July 15th, 2024</div>
+            <div class="layout__top-ribbon"></div>
+            <div class="layout__sidebar">
+                <div class="sidebar__profile-image"></div>
+                <div class="sidebar__contact-info-group">
+                    <div class="contact-info-group__contact-info-item">
+                        <div class="contact-info-item__title">Email</div>
+                        <div class="contact-info-item__value">{{.Email}}</div>
+                    </div>
+                    <div class="contact-info-group__contact-info-item">
+                        <div class="contact-info-item__title">Phone</div>
+                        <div class="contact-info-item__value">{{.Phone}}</div>
+                    </div>
+                    <div class="contact-info-group__contact-info-item">
+                        <div class="contact-info-item__title">Address</div>
+                        <div class="contact-info-item__value">{{.Address}}</div>
+                    </div>
+                </div>
+                <div class="sidebar__link-group">
+                    <div class="link-group__link-item">
+                        <div class="link-item__title">LinkedIn</div>
+                        <div class="link-item__value">{{ .LinkedIn }}</div>
+                    </div>
+                    <div class="link-group__link-item">
+                        <div class="link-item__title">GitHub</div>
+                        <div class="link-item__value">
+                            https://github.com/abradley2
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layout__body">
+                <div class="body__header">
+                    <span> {{.Name}} </span>
+                    <br />
+                    <span class="header__subheader">
+                        Senior Software Engineer with a decade of experience
+                    </span>
+                </div>
+                <div class="body__content">
+                    <div class="contributions">
+                        <div class="contributions__title">
+                            Select Open Source Contributions
+                        </div>
+                        {{ range .OpenSourceContributions }}
+                        <div class="contributions__contribution">
+                            <span class="contribution__language"
+                                >({{.Language}})</span
+                            >
+                            <span class="contribution__link">{{.Link}}</span>
+                            <br />
+                            <span class="contribution__description"
+                                >{{.Description}}</span
+                            >
+                        </div>
+                        {{ end }}
+                    </div>
+                    <div class="content-bottom">
+                        <div class="content-bottom__tech-list">
+                            <!-- <div class="tech-list__title">
+                                Sample of Technologies
+                            </div> -->
+                            {{ range .Technologies }}
+                            <div class="tech-list__tech-item">
+                                <div class="tech-item__header">
+                                    <div class="tech-item__header-icon">
+                                        <!-- downwards carer svg icon -->
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                d="M5.16108 10.0731C4.45387 9.2649 5.02785 8 6.1018 8H17.898C18.972 8 19.5459 9.2649 18.8388 10.0731L13.3169 16.3838C12.6197 17.1806 11.3801 17.1806 10.6829 16.3838L5.16108 10.0731ZM6.65274 9.5L11.8118 15.396C11.9114 15.5099 12.0885 15.5099 12.1881 15.396L17.3471 9.5H6.65274Z"
+                                                fill="#212121"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <div class="tech-item__header-ranking">
+                                        {{.Ranking}}
+                                    </div>
+                                </div>
+                                <div class="tech-item__items">{{.Items}}</div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="content-bottom__employment-history">
+                            {{ range .EmploymentHistory }}
+                            <div class="employment-block">
+                                <div class="employment-block__border-section">
+                                    <div class="border-section__outer-dot">
+                                        <div class="outer-dot__inner-dot"></div>
+                                    </div>
+                                    <div class="border-section__line"></div>
+                                </div>
+                                <div class="employment-block__content-section">
+                                    <div class="content-section__title">
+                                        {{.Title}}
+                                    </div>
+                                    <div class="content-section__job-title">
+                                        {{.JobTitle}}
+                                    </div>
+                                    <div class="content-section__dates">
+                                        {{.Dates}}
+                                    </div>
+                                    <div class="content-section__description">
+                                        {{.Description}}
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{end}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

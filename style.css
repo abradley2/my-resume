@@ -1,0 +1,314 @@
+:root {
+    --title-font-color: #333;
+
+    --top-ribbon-height: 100px;
+    --top-ribbony-y-offset: 32px;
+    --top-ribbon-bg-color: #f0f0f0;
+
+    --sidebar-width: 200px;
+    --sidebar-bg-color: #333;
+    --sidebar-x-offset: 32px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Helvetica, sans-serif, sans-serif;
+}
+
+.layout {
+    display: flex;
+    position: relative;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.layout__top-ribbon {
+    position: absolute;
+    height: var(--top-ribbon-height);
+    top: var(--top-ribbony-y-offset);
+    left: 0px;
+    right: 0px;
+    background-color: var(--top-ribbon-bg-color);
+    padding-left: calc(var(--sidebar-width) + var(--sidebar-x-offset) + 16px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    opacity: 0.7;
+
+    z-index: -1;
+}
+
+.layout__sidebar {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    max-width: var(--sidebar-width);
+    background-color: var(--sidebar-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: var(--top-ribbony-y-offset);
+}
+
+.sidebar__profile-image {
+    background-image: url("me_with_buddy.jpg");
+    flex-shrink: 0;
+    width: calc(var(--sidebar-width) - 32px);
+    height: calc(var(--sidebar-width) - 32px);
+    border-radius: 99999px;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+}
+
+.layout__body {
+    padding-top: var(--top-ribbony-y-offset);
+    width: 100%;
+}
+
+.body__header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: var(--top-ribbon-height);
+    align-items: center;
+    justify-content: center;
+    color: var(--title-font-color);
+    letter-spacing: 6px;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.body__content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 16px;
+    padding-top: 16px;
+}
+
+.header__subheader {
+    font-size: 12px;
+    word-wrap: normal;
+    letter-spacing: 2px;
+}
+
+.sidebar__contact-info-group {
+    flex-shrink: 0;
+    box-sizing: border-box;
+    padding: 0px 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 32px;
+    color: antiquewhite;
+}
+
+.contact-info-group__contact-info-item {
+    width: 100%;
+}
+.contact-info-group__contact-info-item:not(:first-child) {
+    margin-top: 32px;
+}
+
+.contact-info-item__title {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px solid white;
+}
+
+.contact-info-item__value {
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+.sidebar__link-group {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: antiquewhite;
+    padding: 8px;
+    padding-bottom: 32px;
+    box-sizing: border-box;
+}
+
+.link-group__link-item {
+    margin-top: 32px;
+    border-left: 1px solid antiquewhite;
+    padding-left: 8px;
+}
+
+.link-item__title {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.link-item__value {
+    font-size: 12px;
+    margin-top: 8px;
+    text-decoration: underline;
+}
+
+.employment-block {
+    display: flex;
+    --border-section-width: 18px;
+}
+.employment-block:first-child {
+    margin-top: 0px;
+}
+
+.employment-block__border-section {
+    min-width: var(--border-section-width);
+    position: relative;
+}
+
+.border-section__line {
+    background-color: var(--sidebar-bg-color);
+    height: 100%;
+    margin-top: calc(var(--border-section-width) / 2);
+    width: var(--border-section-width);
+}
+
+.border-section__outer-dot {
+    width: var(--border-section-width);
+    height: var(--border-section-width);
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    position: absolute;
+    top: 0px;
+}
+
+.outer-dot__inner-dot {
+    background-color: gray;
+    width: calc(var(--border-section-width) - 6px);
+    height: calc(var(--border-section-width) - 6px);
+    border-radius: 9999px;
+}
+
+.updated {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 10px;
+}
+
+.employment-block__content-section {
+    box-sizing: border-box;
+    padding-left: 16px;
+    padding-top: 4px;
+    width: 100%;
+    min-height: 100px;
+}
+
+.content-section__dates {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.content-section__title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.content-section__job-title {
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.content-section__description {
+    font-size: 12px;
+    margin-top: 8px;
+    max-width: 360px;
+    line-height: 1.25;
+}
+
+.content-bottom {
+    padding-top: 16px;
+    display: flex;
+}
+
+.content-bottom__tech-list {
+    width: 40%;
+    padding-right: 16px;
+}
+
+.content-bottom__employment-history {
+    width: 60%;
+    display: flex;
+    padding-right: 16px;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.contributions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contributions__title {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+}
+
+.contributions__contribution {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.contribution__language {
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.contribution__link {
+    font-size: 11px;
+    text-decoration: underline;
+}
+
+.contribution__description {
+    font-size: 10px;
+    margin-top: 4px;
+    text-decoration: italic;
+}
+
+.tech-list__tech-item {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.tech-item__items {
+    font-size: 14px;
+}
+
+.tech-item__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.tech-item__header-ranking {
+    font-size: 14px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.tech-item__header-icon {
+    width: 64px;
+    height: 64px;
+}
+
+.tech-item__header-label {
+}
